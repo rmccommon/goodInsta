@@ -43,7 +43,14 @@ class Post: PFObject, PFSubclassing {
         post.commentsCount = 0
         
         // Save object (following function will save the object in Parse asynchronously)
-        post.saveInBackground(block: completion)
+        post.saveInBackground(){(success,error) in
+            if error != nil{
+                print(error.debugDescription)
+            }else {
+                print(post.author.username!)
+                print(post.caption)
+            }
+        }
     }
     
     /**

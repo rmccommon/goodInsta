@@ -10,8 +10,11 @@ import UIKit
 
 class postCell: UITableViewCell {
 
+    @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postDescript: UILabel!
+    var indexPath : IndexPath?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

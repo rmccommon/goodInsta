@@ -15,10 +15,11 @@
 		AAFFB0402162B61F0057235C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB03E2162B61F0057235C /* LaunchScreen.storyboard */; };
 		AAFFB04B2162B61F0057235C /* goodInstaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB04A2162B61F0057235C /* goodInstaTests.swift */; };
 		AAFFB0562162B61F0057235C /* goodInstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0552162B61F0057235C /* goodInstaUITests.swift */; };
-		AAFFB0A2216857F80057235C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0A1216857F80057235C /* mainViewController.swift */; };
 		AAFFB0A4216863140057235C /* composeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0A3216863140057235C /* composeViewController.swift */; };
 		AAFFB0A6216867B30057235C /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0A5216867B30057235C /* postCell.swift */; };
 		AAFFB0A8216884DD0057235C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0A7216884DD0057235C /* Post.swift */; };
+		AAFFB0AA216937450057235C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0A9216937450057235C /* mainViewController.swift */; };
+		AAFFB0B22169BB640057235C /* detailpostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0B12169BB640057235C /* detailpostViewController.swift */; };
 		D7D58F8906A4C537C8FE9D6C /* Pods_goodInstaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83DBBDDC331873BEFF47720 /* Pods_goodInstaUITests.framework */; };
 		FD7357DBAB95DC0BFA26F3AD /* Pods_goodInstaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6165036F7A8FCA3FDC0C3D9 /* Pods_goodInstaTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,10 +61,11 @@
 		AAFFB0512162B61F0057235C /* goodInstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goodInstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB0552162B61F0057235C /* goodInstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goodInstaUITests.swift; sourceTree = "<group>"; };
 		AAFFB0572162B61F0057235C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAFFB0A1216857F80057235C /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		AAFFB0A3216863140057235C /* composeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = composeViewController.swift; sourceTree = "<group>"; };
 		AAFFB0A5216867B30057235C /* postCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		AAFFB0A7216884DD0057235C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AAFFB0A9216937450057235C /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		AAFFB0B12169BB640057235C /* detailpostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailpostViewController.swift; sourceTree = "<group>"; };
 		C83DBBDDC331873BEFF47720 /* Pods_goodInstaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_goodInstaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9822128DECCC670921DC0C0 /* Pods-goodInstaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goodInstaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-goodInstaUITests/Pods-goodInstaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6165036F7A8FCA3FDC0C3D9 /* Pods_goodInstaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_goodInstaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,10 +150,11 @@
 				AAFFB0352162B61D0057235C /* AppDelegate.swift */,
 				AAFFB0372162B61D0057235C /* loginViewController.swift */,
 				AAFFB0392162B61D0057235C /* Main.storyboard */,
+				AAFFB0B12169BB640057235C /* detailpostViewController.swift */,
+				AAFFB0A9216937450057235C /* mainViewController.swift */,
 				AAFFB0A7216884DD0057235C /* Post.swift */,
 				AAFFB0A5216867B30057235C /* postCell.swift */,
 				AAFFB0A3216863140057235C /* composeViewController.swift */,
-				AAFFB0A1216857F80057235C /* mainViewController.swift */,
 				AAFFB03C2162B61F0057235C /* Assets.xcassets */,
 				AAFFB03E2162B61F0057235C /* LaunchScreen.storyboard */,
 				AAFFB0412162B61F0057235C /* Info.plist */,
@@ -333,13 +336,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-goodInsta/Pods-goodInsta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,10 +400,11 @@
 			files = (
 				AAFFB0382162B61D0057235C /* loginViewController.swift in Sources */,
 				AAFFB0362162B61D0057235C /* AppDelegate.swift in Sources */,
-				AAFFB0A2216857F80057235C /* mainViewController.swift in Sources */,
 				AAFFB0A8216884DD0057235C /* Post.swift in Sources */,
 				AAFFB0A4216863140057235C /* composeViewController.swift in Sources */,
 				AAFFB0A6216867B30057235C /* postCell.swift in Sources */,
+				AAFFB0B22169BB640057235C /* detailpostViewController.swift in Sources */,
+				AAFFB0AA216937450057235C /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,14 @@ class composeViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.performSegue(withIdentifier: "cancelPost", sender: nil)
     }
     @IBAction func submitPost(_ sender: Any) {
-        Post.postUserImage(image: resize(image: postPic.image!, newSize: CGSize(width:2000 , height:2000)), withCaption: postDesc.text, withCompletion: nil)
+        let newImg = resize(image: postPic.image!, newSize: CGSize(width: 1000, height: 1000))
+        Post.postUserImage(image: newImg, withCaption: postDesc.text){(success, error) in
+            if error != nil{
+                print(error.debugDescription)
+            }
+        }
+        self.performSegue(withIdentifier: "cancelPost", sender: nil
+        )
     }
     @IBAction func goodTapPic(_ sender: UITapGestureRecognizer) {
         let vc = UIImagePickerController()
